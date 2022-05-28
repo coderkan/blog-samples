@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  profiles:
+    default: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: liquibasedemo
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+    enabled: true
+server:
+  port: 8080
